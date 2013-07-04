@@ -1,0 +1,23 @@
+<fieldset>
+    <table class="frame">
+        <tr>
+            <td colspan="2">
+                Здравей,
+                <% user = User.find(session[:user_id]) %>
+                <%= user.loginame %><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= start_form_tag :action => :logout %>
+                    <%= submit_tag 'Изход' %>
+                <%= end_form_tag %>
+            </td>
+            <td>
+                <%= start_form_tag :action => :edit_user_form %>
+                    <%= submit_tag 'Редакция' %>
+                <%= end_form_tag %>
+            </td>
+        </tr>
+    </table>
+</fieldset>

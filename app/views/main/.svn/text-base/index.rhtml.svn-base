@@ -1,0 +1,9 @@
+<div id="user_list" class="main"_div>
+  Loading users...
+</div>
+<div id="contest_list" class="main_div">
+  Loading contests...
+</div>
+<div id="picture_list" class="main_div">
+  Loading pictures...
+</div>

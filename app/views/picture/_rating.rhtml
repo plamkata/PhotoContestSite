@@ -1,0 +1,22 @@
+<div class="rating" id="rating_<%= @user_rating.picture_id %>">
+  <table>
+    <tr>
+      <% 1.upto(@user_rating.rating) do |i| %>
+        <td class="marked"><%= link_to_remote "#{i}", 
+                                              :update => "rating_#{@user_rating.picture_id}", 
+                                              :url => {:controler => 'picture', 
+                                                       :action => "rate_picture", 
+                                                       :rate => i, 
+                                                       :picture_id => @user_rating.picture_id} %></td>
+      <% end %>
+      <% (@user_rating.rating+1).upto(5) do |i| %>
+        <td class="not_marked"><%= link_to_remote "#{i}", 
+                                                  :update => "rating_#{@user_rating.picture_id}", 
+                                                  :url => {:action => "rate_picture", 
+                                                           :rate => i, 
+                                                           :picture_id => @user_rating.picture_id} %></td>
+      <% end %>
+
+    </tr>
+  </table>
+</div>

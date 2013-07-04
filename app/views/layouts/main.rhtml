@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Фото конкурс за планинарска снимка</title>
+        <META Http-Equiv="Content-Type" Content="text/html; charset=utf-8" /><%= stylesheet_link_tag "scaffold" , "contests" , :media => "all" %>
+		<%= javascript_include_tag "prototype" %>
+    </head>
+    
+    <body onload="<%= show_content({:action => 'blank'}, {:action => 'list_contests'}, {:action => 'blank'}) %>">
+        <table width="100%" border="1">
+            <tr width="100%">
+                <td width="20%"/>
+                <td width="80%" />
+                <td />
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <img src="/images/logo.bmp" />
+                </th>
+                <td>
+                    <% if !session[:user_id] %>
+                        <%= render :partial => 'login' %>
+                    <% else %>
+                        <%= render :partial => 'logout' %>
+                    <% end %>
+                </td>
+            </tr>
+            <tr>
+				        <td colspan="2">
+                    <h1>
+                        <%= @page_title || "Фото конкурс" %>
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td id="contest_menu">
+                    <%= list_contests_menu_names(self) %>
+                </td>
+                <td valign="top">
+                    <% if flash[:notice] %>
+                        <div id="notice" ><%= flash[:notice] %></div>
+                    <% end %>
+                    <%= @content_for_layout %>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+</html>

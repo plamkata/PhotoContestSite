@@ -1,0 +1,55 @@
+<div class="contest_form" id="contest_form">
+  <fieldset>
+    <legend><%= @form_title %></legend>
+    
+    <% remote_form_for :contest, :update => @update, 
+        :url => { :action => @action, :target_id => @contest.id, :update => @update } do |form| %>
+    <p>
+      <label for="title" >Заглавие*:</label>
+      <%= form.text_field :title, :size => 30 %>
+      <%= error_message_on('contest', 'title', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="description" >Описание:</label>
+      <%= form.text_area :description, :rows => 3, :cols => 22 %>
+      <%= error_message_on('contest', 'description', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="start_date" >Начална дата:</label>
+      <%= date_input(@start_date_default, 'contest', 'active_at') %>
+      <%= error_message_on('contest', 'start_date', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="end_date">Крайна дата:</label>
+      <%= date_input(@end_date_default, 'contest', 'inactive_at') %>
+      <%= error_message_on('contest', 'end_date', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="is_visible">Видим:</label>
+      <%= form.check_box :is_visible %>
+    </p>
+    
+    <p>
+      <label for="max_user_pictures" >Максимален брой снимки за потребител:</label>
+      <%= form.text_field :max_user_pictures, :size => 10 %>
+      <%= error_message_on('contest', 'max_user_pictures', '', '', 'error') %>
+    </p><br/>
+    
+    <p>
+      <label for="max_user_votes" >Максимален брой гласове за потребител:</label>
+      <%= form.text_field :max_user_votes, :size => 10 %>
+      <%= error_message_on('contest', 'max_user_votes', '', '', 'error') %>
+    </p>
+    
+    <%= submit_tag @button_value , :class => "submit" %>
+    <% end %>
+    <%= form_remote_tag :update => @update, 
+        :url => { :action => :contest_cancel, :target_id => @contest.id, :update => @update } %>
+      <%= submit_tag "Отказ" , :class => "submit" %>
+    <%= end_form_tag %>
+  </fieldset>
+</div>

@@ -1,0 +1,10 @@
+<% for contest in @contests %>
+  <div class="menu_item">
+    <a href="" onclick="<%= show_content({:action => 'blank'},{:action => 'blank'},{:action => 'list_pictures', :contest_id => contest.id}) %>">
+      <%= h contest.title %>
+    </a>
+  </div>
+<% end %>
+<% if session[:is_admin] %>
+  <a href="" onclick="<%= show_content({:action => 'list_users'}, {:action => 'blank'}, {:action => 'blank'}) %>">Покажи потребители</a><br />
+<% end %>

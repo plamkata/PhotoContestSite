@@ -1,0 +1,70 @@
+8
+
+dir
+56
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository/Sites/PhotoContestsSite/vendor/plugins/responds_to_parent
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository
+
+
+
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d8b99062-362d-364e-a47a-7023bac7960d
+
+README
+file
+
+
+
+
+2008-08-14T18:43:26.411752Z
+86cbb5d9d60d91c887f1cc363f1d8d24
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+Rakefile
+file
+
+
+
+
+2008-08-14T18:43:26.400752Z
+8f9479270e6a43be8e401c67a28cb13a
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+init.rb
+file
+
+
+
+
+2008-08-14T18:43:26.404752Z
+db55f3ff81d7dad58d7f84e6487d6046
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+lib
+dir
+
+test
+dir
+

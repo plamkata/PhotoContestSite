@@ -1,0 +1,49 @@
+<div class="picture" id="picture_<%= picture.id %>">
+  <table>
+    <tr>
+      <td colspan="2" align="center">
+        <% @picture = picture %>
+        <div class="picture_frame">
+          <a href="<%= url_for_file_column('picture', 'name') %>" target="_blank">
+            <%= image_tag url_for_file_column("picture", "name", "thumb") %>
+          </a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="title" colspan="2" ><%= h path_to_name @picture.name %></td>
+    </tr>
+    <tr>
+      <td class="description" colspan="2"><%= h picture.comment %>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="left">
+        <% if session[:user_id] %>
+          <% @user_rating = UserRating.find(:first, :conditions => ["user_id = ? and picture_id = ?", session[:user_id], @picture.id]) %>
+          <% if @user_rating.nil? %>
+            <% @user_rating = UserRating.new %>
+            <% @user_rating.user_id = session[:user_id] %>
+            <% @user_rating.picture_id = @picture.id %>
+            <% @user_rating.rating = 0 %>
+          <% end %>
+          <%= render :partial => "rating", :object => @user_rating %>
+        <% else %>
+          <a href="" onclick="alert('Трябва да сте регистриран, за да оценявате снимки');">Рейтинг</a>
+        <% end %>
+      </td>
+      <td class="right">
+        <% if session[:is_admin] || session[:user_id] == @picture.user_id %>
+          <%=
+            link_to_remote "[delete]" , 
+            :update => "picture_#{picture.id}", 
+            :url => { # link_to options
+              :controller => 'picture',
+              :action => 'delete_picture',
+              :target_id => picture.id}, 
+            :confirm => "Наистина ли искате да изтриете снимката '#{path_to_name(picture.name)}'?"
+          %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</div>

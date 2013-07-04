@@ -1,0 +1,33 @@
+<div id="pictures_div" class="list">
+  <h1><%= @contest.title %></h1>
+  
+  <a href="" onclick="<%= show_content({:action => 'blank'}, {:action => 'list_contests'}, {:action => 'blank'}) %>"><%= "<< Конкурси" %></a><br />
+  
+  <% if session[:user_id] %>
+    <%= form_remote_tag :update => "sort_pictures", :position => "after", :url => { :action => :new_picture_form, :contest_id => @contest.id } %>
+      <%= submit_tag "Добави снимка" , :class => "submit" %>
+    <%= end_form_tag %>  
+  <% end %>
+  
+  <div id="sort_pictures" class="sort" >
+    <%= ajax_sorting_links @picture_pages, @orderer, {
+      :update => 'pictures_div', 
+      :name => 'page', 
+      :params => {:action => :list_pictures, :contest_id => @contest.id}, 
+      :columns => {'name' => 'Заглавие'}
+      } 
+    %>
+  </div>
+  
+  <%= render :partial => "picture" , :collection => @pictures %>
+  
+  <div id="page_pictures" class="page" >
+    <%= ajax_pagination_links @picture_pages, @orderer, {
+      :update => 'pictures_div', 
+      :window_size => 6, 
+      :name => 'page', 
+      :params => {:action => :list_pictures, :contest_id => @contest.id} } 
+    %>
+  </div>
+  
+</div>

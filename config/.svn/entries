@@ -1,0 +1,82 @@
+8
+
+dir
+56
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository/Sites/PhotoContestsSite/config
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository
+
+
+
+2008-08-14T19:42:33.076000Z
+54
+plamKaTa
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d8b99062-362d-364e-a47a-7023bac7960d
+
+boot.rb
+file
+
+
+
+
+2008-08-14T18:43:25.573752Z
+051f2b77c29b10f8b2e06a7dfd26ab07
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+database.yml
+file
+
+
+
+
+2008-08-14T18:43:25.566752Z
+41fd15df7ef91873c5b8cb74e856e563
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+environment.rb
+file
+
+
+
+
+2008-08-14T18:43:25.582752Z
+11d75ab78fb05c2b3ac7df10ffe98860
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+environments
+dir
+
+initializers
+dir
+
+routes.rb
+file
+
+
+
+
+2008-08-14T18:43:25.561752Z
+949765560ec55af456d4ccaf941330f9
+2007-03-31T19:08:51.718750Z
+8
+plamen
+

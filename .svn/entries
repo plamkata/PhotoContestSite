@@ -1,0 +1,82 @@
+8
+
+dir
+56
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository/Sites/PhotoContestsSite
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository
+
+
+
+2008-08-14T19:44:00.116000Z
+56
+plamKaTa
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d8b99062-362d-364e-a47a-7023bac7960d
+
+README
+file
+
+
+
+
+2008-08-14T18:43:28.404752Z
+c03e541e76f777df453c8a9696199d46
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+Rakefile
+file
+
+
+
+
+2008-08-14T18:43:28.399752Z
+17f2f134da4cd31ea095d5868ca89e86
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+app
+dir
+
+components
+dir
+
+config
+dir
+
+db
+dir
+
+doc
+dir
+
+lib
+dir
+
+public
+dir
+
+script
+dir
+
+test
+dir
+
+vendor
+dir
+

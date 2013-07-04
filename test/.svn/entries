@@ -1,0 +1,103 @@
+8
+
+dir
+56
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository/Sites/PhotoContestsSite/test
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository
+
+
+
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d8b99062-362d-364e-a47a-7023bac7960d
+
+abstract_unit.rb
+file
+
+
+
+
+2008-08-14T18:43:23.909752Z
+4c589a4a276b07aeab54838fc9b2a283
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+connection.rb
+file
+
+
+
+
+2008-08-14T18:43:23.904752Z
+cb71c91d0e3af62e8099425e9cb3b95e
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+file_column_test.rb
+file
+
+
+
+
+2008-08-14T18:43:23.920752Z
+c4b7653adb80ffb56fba54c0ff2bcfbe
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+fixtures
+dir
+
+functional
+dir
+
+integration
+dir
+
+magick_test.rb
+file
+
+
+
+
+2008-08-14T18:43:23.914752Z
+7724f6dfe21a1be396a7ea506e1dc4ef
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+mocks
+dir
+
+test_helper.rb
+file
+
+
+
+
+2008-08-14T18:43:23.898752Z
+fc4d849e28f089141debb18b22058277
+2007-03-31T19:08:51.718750Z
+8
+plamen
+
+unit
+dir
+

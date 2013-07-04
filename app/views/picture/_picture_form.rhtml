@@ -1,0 +1,33 @@
+<div class="contest_form" id="picture_form">
+  <fieldset>
+    <legend><%= @form_title %></legend>
+    
+    <%= form_tag ({:action => 'new_picture', :id => @picture }, 
+                  {:multipart => true, :target => 'upload_frame'}) %>
+      
+      <p>
+        <label for="name" >Изберете снимка:</label>
+        <%= file_column_field "picture", "name" %>
+        <%= error_message_on('picture', 'name', '', '', 'error') %>
+      </p>
+      
+      <p>
+        <label for="comment" >Описание:</label>
+        <%= text_field :picture, :comment, :rows => 2, :cols => 20 %>
+        <%= error_message_on('picture', 'comment', '', '', 'error') %>
+      </p>
+      
+      <%= hidden_field "picture", "contest_id", :value => @contest.id %>
+      <%= hidden_field "picture", "user_id", :value => session[:user_id] %>
+      
+      <%= submit_tag "Качване" , :class => "submit" %>
+    <%= end_form_tag %>
+    <iframe id="upload_frame" name="upload_frame" style="display: none"></iframe>
+    
+    <%= form_remote_tag :update => @update, 
+        :url => { :action => :picture_cancel, :target_id => @picture.id, :update => @update } %>
+      <%= submit_tag "Отказ" , :class => "submit" %>
+    <%= end_form_tag %>
+    
+  </fieldset>
+</div>

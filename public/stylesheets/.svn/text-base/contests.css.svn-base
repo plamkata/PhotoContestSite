@@ -1,0 +1,267 @@
+.menu_item {
+background-color: #54BBEC;
+border-color: background;
+margin-bottom: 2px;
+}
+.menu_item a:link {text-decoration: none;}
+.menu_item a:visited {text-decoration: none; color: #000000;}
+.menu_item a:active {text-decoration: none;}
+.menu_item a:hover {text-decoration: underline; color: #878787;}
+
+/* Global styles */
+#notice {
+border: 2px solid red;
+padding: 9px;
+margin-bottom: 8px;
+background-color: #f0f0f0 ;
+font: bold smaller sans-serif;
+}
+
+#columns {
+background: #141 ;
+margin-top: 0px;
+}
+
+/* Styles for main page */
+#banner {
+background: #9FCDFF;
+padding-top: 10px;
+padding-bottom: 2px;
+border-bottom: none;
+font: small-caps 40px/40px "Times New Roman", serif;
+color: #282 ;
+text-align: center;
+}
+
+#banner img {
+float: center;
+}
+
+#main {
+float: center;
+margin-left: 11em;
+margin-right: 14em;
+padding-top: 1ex;
+padding-left: 1em;
+padding-right: 1em;
+background: white;
+}
+
+#left-side {
+float: left;
+padding-top: 1em;
+padding-left: 1em;
+padding-bottom: 1em;
+width: 10em;
+background: #9FCDFF;
+}
+
+#left-side a {
+color: #bfb ;
+font-size: large;
+}
+
+#right-side {
+float: right;
+padding-top: 1em;
+padding-right: 1em;
+padding-bottom: 1em;
+width: 13em;
+background: #9FCDFF ;
+}
+
+#right-side a {
+color: #bfb ;
+font-size: small;
+}
+
+h1 {
+font: 150% sans-serif;
+color: #226 ;
+border-bottom: 3px dotted #77d ;
+}
+
+/* Styles for user/list_users */
+.right {
+text-align: right;
+}
+
+.center {
+text-align: center;
+}
+
+.title {
+font-weight: bold;
+}
+
+.description {
+font-size: 9pt;
+}
+
+#contest_menu {
+vertical-align: top;
+}
+
+.main_div {
+vertical-align: top;
+}
+
+#contests_div table {
+width: 100%;
+margin-bottom: 10pt;
+}
+
+#users_div table {
+width: 100%;
+border: outset 1pt;
+}
+
+#users_div td, th {
+width: 18%;
+}
+
+.sort {
+float: top;
+}
+
+.page {
+float: bottom;
+}
+
+div .picture_frame {
+width: 121px;
+height: 121px;
+}
+
+.picture table {
+text-align: center;
+vertical-align: bottom;
+}
+
+div .picture img {
+display: block;
+vertical-align: bottom;
+background: #00D6CA;
+}
+  
+div .picture {
+float: left;
+margin-right: 0.5em;
+}
+
+.marked {
+background: #00D6CA;
+color: #00D6CA;
+}
+
+/* Styles for contest form */
+.contest_form fieldset {
+width: 460px;
+background: #B8B9BB;
+}
+
+.contest_form legend {
+font-weight: bold;
+color: #000000;
+background: #54BBEC ;
+font-style: sans-serif;
+padding: 0.2em 1em;
+border: 1px solid #000000;
+}
+
+.contest_form label {
+width: 10em;
+float: left;
+text-align: right;
+margin-right: 0.5em;
+display: block;
+}
+
+.contest_form input {
+color: #781351;
+background: #54BBEC;
+border: 1px solid #781351;
+}
+
+.contest_form .submit {
+margin-left: 1em;
+margin-right: 1em;
+float: left;
+}
+
+
+.small_contest_form fieldset {
+background: #efe;
+}
+
+.small_contest_form legend {
+color: #dfd ;
+background: #141 ;
+font-style: sans-serif;
+}
+
+.small_contest_form label {
+width: 3em;
+text-align: right;
+margin-right: 0.5em;
+}
+
+.small_contest_form .left {
+float: left;
+}
+.small_contest_form .right {
+float: right;
+}
+
+.small_contest_form .submit {
+float: right;
+margin-left: 5.5em;
+}
+
+.small_contest_form a {
+background: #141;
+}
+
+/* The error box */
+.fieldWithErrors {
+padding: 2px;
+background-color: red;
+display: table;
+}
+
+.error {
+text-align: left;
+margin-left: 14em;
+font-size: 12px;
+font-style: sans-serif;
+}
+
+#errorExplanation {
+width: 200px;
+border: 1px solid red;
+padding: 5px;
+padding-bottom: 8px;
+margin-bottom: 12px;
+background-color: #f0f0f0 ;
+}
+
+#errorExplanation h2 {
+text-align: left;
+font-weight: bold;
+padding: 1px 1px 1px 5px;
+font-size: 10px;
+margin: -7px;
+background-color: #c00 ;
+color: #fff ;
+}
+
+#errorExplanation p {
+color: #333 ;
+margin-bottom: 0;
+padding: 5px;
+}
+
+#errorExplanation ul li {
+font-size: 10px;
+list-style: square;
+}

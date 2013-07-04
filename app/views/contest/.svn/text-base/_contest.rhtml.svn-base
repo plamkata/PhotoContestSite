@@ -1,0 +1,55 @@
+
+<div class="contest" id="contest_<%= contest.id %>">
+  <table>
+    <tr>
+      <td class="title">
+        <a href="" onclick="<%= show_content({:action => 'blank'},{:action => 'blank'},{:action => 'list_pictures', :contest_id => contest.id}) %>"><%= h contest.title %></a>
+      </td>
+      <td class="right">
+        <% if session[:is_admin] %>
+          <%=
+            link_to_remote "#{contest.is_visible == 1 ? '[visible]' : '[invisible]'}" , 
+            :update => "contest_#{contest.id}", 
+            :url => { # link_to options
+              :controller => 'contest',
+              :action => 'change_is_visible',
+              :target_id => contest.id}, 
+            :confirm => "Наистина ли искате да промените видимостта на конкурс '#{contest.title}'?"
+%>
+          <%=
+            link_to_remote "[edit]" , 
+            :update => "contest_#{contest.id}", 
+            :url => { # link_to options
+              :controller => 'contest',
+              :action => 'edit_contest_form',
+              :target_id => contest.id, 
+              :update => "contest_#{contest.id}"} # this time as a url parameter
+%>
+          <%=
+            link_to_remote "[delete]" , 
+            :update => "contest_#{contest.id}", 
+            :url => { # link_to options
+              :controller => 'contest',
+              :action => 'delete_contest',
+              :target_id => contest.id}, 
+            :confirm => "Наистина ли искате да изтриете конкурс '#{contest.title}'?"
+%>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td class="description" colspan="2"><%= h contest.description %></td>
+    </tr>
+    <tr>
+      <td class="left">
+        <label>Начало:&nbsp;</label><%= h contest.start_date_formatted %>
+      </td>
+      <td class="right">
+        <label>Край:&nbsp;</label><%= h contest.end_date_formatted %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">Kartinki</td>
+    </tr>
+  </table>
+</div>

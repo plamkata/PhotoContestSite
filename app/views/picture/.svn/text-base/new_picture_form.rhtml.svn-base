@@ -1,0 +1,3 @@
+<% @action = "new_picture" %>
+<% @update = "picture_form" %>
+<%= render :partial => "picture_form" %>

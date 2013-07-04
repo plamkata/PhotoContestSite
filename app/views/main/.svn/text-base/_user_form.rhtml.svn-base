@@ -1,0 +1,59 @@
+<div class="contest_form">
+  <fieldset>
+    <legend><%= @form_title %></legend>
+    
+    <% form_for :user, :url => { :action => @action } do |form| %>
+    <p>
+      <label for="user_loginame" >Потребителско име*:</label>
+      <%= form.text_field :loginame, :size => 30 %>
+      <%= error_message_on('user', 'loginame', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="user_email" >Email*:</label>
+      <%= form.text_field :email, :size => 30 %>
+      <%= error_message_on('user', 'email', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="user_pass" >Парола*:</label>
+      <%= form.password_field :pass, :size => 30 %>
+      <%= error_message_on('user', 'pass', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="user_pass_confirmation" >Потвърди парола*:</label>
+      <%= form.password_field :pass_confirmation, :size => 30 %>
+      <%= error_message_on('user', 'pass_confirmation', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="user_first_name" >Име:</label>
+      <%= form.text_field :first_name, :size => 30 %>
+      <%= error_message_on('user', 'first_name', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="user_last_name" >Фамилия:</label>
+      <%= form.text_field :last_name, :size => 30 %>
+      <%= error_message_on('user', 'last_name', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="user_person_activity" >Дейност:</label>
+      <%= form.text_field :person_activity, :size => 30 %>
+      <%= error_message_on('user', 'person_activity', '', '', 'error') %>
+    </p>
+    
+    <p>
+      <label for="spam" >Искам да получавам съобщения:</label>
+      <%= form.check_box :spam %>
+    </p>
+    
+    <%= submit_tag @button_value , :class => "submit" %>
+    <% end %>
+    <%= start_form_tag :action => :index %>
+      <%= submit_tag "Отказ", :class => "submit" %>
+    <%= end_form_tag %>
+  </fieldset>
+</div>

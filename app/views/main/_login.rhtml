@@ -1,0 +1,29 @@
+<fieldset>
+    <legend>Вход</legend>
+<%= start_form_tag :controller => 'main', :action => :login %>
+    <table class="frame">
+        <tr>
+            <td nowrap>
+                <label for="name" >Име:</label><%= text_field_tag :loginame, params[:loginame], :size => 4 %>
+            </td>
+            <td nowrap>
+                <label for="password" >Парола:</label><%= password_field_tag :pass, params[:pass], :size => 6 %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= submit_tag "Вход" %>
+            </td>
+            
+<%= end_form_tag %>
+<%= start_form_tag :action => :register_form %>
+
+            <td>
+                <%= submit_tag "Регистрация" %>
+            </td>
+        </tr>
+
+<%= end_form_tag %>
+
+    </table>
+</fieldset>

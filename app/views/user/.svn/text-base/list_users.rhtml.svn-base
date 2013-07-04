@@ -1,0 +1,34 @@
+<div id="users_div">
+  <div id="sort_users" class="sort">
+    <%= ajax_sorting_links @user_pages, @orderer, {
+      :update => 'users_div', 
+      :name => 'page', 
+      :params => {:action => :list_users}, 
+      :columns => {'loginame' => 'Потребител', 'email' => 'Email', 'first_name' => 'Име', 'last_name' => 'Фамилия'}
+      } 
+    %>
+  </div>
+
+  <table>
+    <tr class="header">
+      <th>Потребител</th>
+      <th>Email</th>
+      <th class="center">Име</th>
+      <th class="center">Фамилия</th>
+      <% if session[:is_admin] %>      
+      <th class="center">Админ.</th>
+      <th class="right"></th>
+      <% end %>
+    </tr>
+  </table>
+  <%= render :partial => "user" , :collection => @users %>
+  
+  <div id="page_users" class="page" >
+    <%= ajax_pagination_links @user_pages, @orderer, {
+      :update => 'users_div', 
+      :window_size => 3, 
+      :name => 'page', 
+      :params => {:action => :list_users} } 
+    %>
+  </div>
+</div>

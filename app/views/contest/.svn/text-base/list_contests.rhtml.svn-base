@@ -1,0 +1,28 @@
+<div id="contests_div" class="list">
+  <% if session[:is_admin] %>
+    <%= form_remote_tag :update => "sort_contests", :position => "after", :url => { :action => :new_contest_form } %>
+      <%= submit_tag "Нов конкурс" , :class => "submit" %>
+    <%= end_form_tag %>  
+  <% end %>
+  
+  <div id="sort_contests" class="sort" >
+    <%= ajax_sorting_links @contest_pages, @orderer, {
+      :update => 'contests_div', 
+      :name => 'page', 
+      :params => {:action => :list_contests}, 
+      :columns => {'title' => 'Заглавие', 'start_date' => 'Начало', 'end_date' => 'Край'}
+      } 
+    %>
+  </div>
+  
+  <%= render :partial => "contest" , :collection => @contests %>
+  
+  <div id="page_contests" class="page" >
+    <%= ajax_pagination_links @contest_pages, @orderer, {
+      :update => 'contests_div', 
+      :window_size => 3, 
+      :name => 'page', 
+      :params => {:action => :list_contests} } 
+    %>
+  </div>
+</div>

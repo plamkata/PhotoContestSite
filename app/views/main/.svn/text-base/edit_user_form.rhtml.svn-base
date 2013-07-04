@@ -1,0 +1,2 @@
+<% @action = "edit_user" %>
+<%= render :partial => "user_form" %>

@@ -1,0 +1,3 @@
+<% @action = "edit_contest" %>
+<% @update = params[:update] || "contest_list" %>
+<%= render :partial => "contest_form" %>

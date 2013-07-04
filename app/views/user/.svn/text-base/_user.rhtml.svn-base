@@ -1,0 +1,33 @@
+<div id="user_<%= user.id %>">
+  <table>
+    <tr>
+      <td><%= h user.loginame %></td>
+      <td><%= h user.email %></td>
+      <td class="center"><%= h user.first_name %></td>
+      <td class="center"><%= h user.last_name %></td>
+      
+      <% if session[:is_admin] %> 
+      <td class="center">
+        <%= link_to_remote "#{user.is_admin}" , 
+            :update => "user_#{user.id}", 
+            :url => { # link_to options
+              :controller => 'user',
+              :action => 'change_is_admin',
+              :target_id => user.id}, 
+            :confirm => "Наистина ли искате да промените правата на потребител #{h user.loginame}?"
+        %>
+      </td>
+      <td class="right">
+        <%= link_to_remote "[delete]" , 
+            :update => "user_#{user.id}", 
+            :url => { # link_to options
+              :controller => 'user',
+              :action => 'delete_user',
+              :target_id => user.id}, 
+            :confirm => "Наистина ли искате да изтриете потребител #{h user.loginame}?"
+         %>
+      </td>
+      <% end %>
+    </tr>
+  </table>
+</div>
